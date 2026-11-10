@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neeraj's Empire</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080d1a;
+            color: white;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #111827;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .logo {
+            color: #00d9ff;
+            font-size: 32px;
+            letter-spacing: 3px;
+            animation: glow 2s infinite alternate;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #00d9ff;
+            }
+
+            to {
+                text-shadow: 0 0 25px #00d9ff;
+            }
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #172033;
+            padding: 18px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d9ff;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            background: linear-gradient(135deg, #101c36, #172d52);
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            margin-bottom: 35px;
+            font-size: 18px;
+        }
+
+        /* BUTTON */
+
+        button {
+            background: #00bfff;
+            color: #06111f;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+
+            animation: buttonGlow 1.5s ease-in-out infinite alternate;
+
+            transition: 0.3s;
+        }
+
+        @keyframes buttonGlow {
+            from {
+                box-shadow: 0 0 5px #00bfff;
+            }
+
+            to {
+                box-shadow: 0 0 30px #00bfff;
+            }
+        }
+
+        button:hover {
+            background: white;
+            transform: scale(1.08);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #00d9ff;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        section p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        #about, #contact {
+            background: #101827;
+        }
+
+        #services {
+            background: #0b1220;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+            padding: 25px;
+            text-align: center;
+            color: #94a3b8;
+        }
+
+        /* MOBILE DESIGN */
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                margin: 7px;
+                font-size: 13px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+        }
+
+.business-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+}
+
+.business-card {
+    background: linear-gradient(135deg, #172033, #101c36);
+    padding: 35px 20px;
+    border: 1px solid #00bfff;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.business-card h3 {
+    color: #00d9ff;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.business-card p {
+    color: #cbd5e1;
+}
+
+.business-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #00bfff;
+}
+
+@media (max-width: 600px) {
+    .business-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    padding: 15px;
+    border: 1px solid #00bfff;
+    border-radius: 8px;
+    background: #172033;
+    color: white;
+    font-size: 16px;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">N<span>EERAJ</span> EMPIRE</h1>
+        <p>Building the Future</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+
+        <h1>Welcome to My Business</h1>
+
+        <p>
+            Dream Big. Work Hard.
+            Build Something Great.
+        </p>
+
+        <button onclick="welcomeMessage()">
+            Get Started
+        </button>
+
+    </section>
+
+    <section id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            We are building something amazing for the future.
+            Our mission is to create innovative technology
+            and build a successful business.
+        </p>
+
+    </section>
+
+    <section id="services">
+
+    <h2>Our Businesses</h2>
+
+    <div class="business-container">
+
+        <div class="business-card">
+            <h3>Technology & AI</h3>
+            <p>Building websites, apps and AI tools.</p>
+        </div>
+
+        <div class="business-card">
+            <h3>Real Estate</h3>
+            <p>Building properties and rental businesses.</p>
+        </div>
+
+        <div class="business-card">
+            <h3>Manufacturing</h3>
+            <p>Creating products and innovative solutions.</p>
+        </div>
+
+        <div class="business-card">
+            <h3>Investments</h3>
+            <p>Creating long-term wealth.</p>
+        </div>
+
+    </div>
+
+    </section>
+
+    
+  
+<section id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Have a question? Get in touch with us.</p>
+
+    <form onsubmit="sendMessage(event)">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+  
+    <footer>
+        <p>© 2026 Neeraj's Empire. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+
+        function welcomeMessage() {
+
+            alert("Welcome to Neeraj Empire!");
+
+        }
+
+function sendMessage(event) {
+    event.preventDefault();
+
+    alert("Thank you! Your message has been received.");
+
+    event.target.reset();
+}
+
+    </script>
+
+</body>
+</html>
